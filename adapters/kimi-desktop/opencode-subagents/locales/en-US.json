@@ -1,0 +1,23 @@
+{
+  "displayName": "OpenCode Free Subagents",
+  "shortDescription": "Thin connector to the local OpenCode free subagent backend for focused parallel tasks (~200K cap)",
+  "longDescription": "Lightweight MCP connector to the single local OpenCode free-model backend. Dynamically resolves active free models for single-agent delegation and parallel multi-model consultation without duplicating configs. Effective context is capped around 200K tokens—keep inputs focused.",
+  "developerName": "WYL",
+  "tryPrompts": [
+    "Have the free subagent team review potential issues in this code",
+    "Use the active flagship free subagent to inspect this file",
+    "List all currently available OpenCode free subagent models"
+  ],
+  "mcpOverrides": {
+    "opencode-subagents": {
+      "displayName": "OpenCode Free Subagents",
+      "description": "Thin connector to the local OpenCode free subagent backend for focused parallel tasks (~200K cap)"
+    }
+  },
+  "skillOverrides": {
+    "opencode-subagents": {
+      "displayName": "OpenCode Free Subagents",
+      "description": "Thin connector to the local OpenCode free subagent backend for focused parallel tasks (~200K cap)"
+    }
+  }
+}

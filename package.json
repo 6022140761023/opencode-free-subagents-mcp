@@ -1,0 +1,10 @@
+{
+  "name": "opencode-api-proxy",
+  "version": "1.0.0",
+  "description": "Local OpenAI-compatible API reverse proxy for OpenCode Desktop",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

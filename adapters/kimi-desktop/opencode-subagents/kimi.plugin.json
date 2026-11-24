@@ -1,0 +1,63 @@
+{
+  "$schema": "https://catalog.msh.team/misc/kimi.plugin.schema.json",
+  "name": "opencode-subagents",
+  "version": "0.1.0",
+  "description": "轻量连接本机唯一的 OpenCode 免费子代理后端（动态同步现役免费模型），支持单模型委派与多模型并行会诊。有效上下文上限约 200K tokens，仅传精简焦点片段。",
+  "keywords": [
+    "opencode",
+    "subagents",
+    "free",
+    "mcp"
+  ],
+  "author": "WYL",
+  "license": "MIT",
+  "skillInstructions": "本插件仅作为薄接入层连接本地 OpenCode 免费子代理后端。需要并行会诊、局部审查或专项委派时直接调用 opencode-subagents MCP（run_subagent / parallel_subagents / list_free_models），无需写死模型名；严守约 200K tokens 有效上下文上限。",
+  "interface": {
+    "displayName": "OpenCode 免费子代理集群",
+    "shortDescription": "轻量连接本地 OpenCode 免费子代理后端，动态调度现役免费模型并行处理聚焦任务（上限约 200K）",
+    "longDescription": "轻量连接本机唯一的 OpenCode 免费子代理后端（动态同步现役免费模型），支持单模型委派与多模型并行会诊。有效上下文上限约 200K tokens，仅传精简焦点片段。",
+    "developerName": "WYL",
+    "websiteURL": "",
+    "iconUrl": "",
+    "category": "PRODUCTIVITY",
+    "defaultLocale": "zh-CN",
+    "locales": "./locales/",
+    "tryPrompts": [
+      "让免费团队会诊这段代码的潜在问题",
+      "调用默认免费旗舰子代理审查这个文件",
+      "列出当前可用的 OpenCode 免费子代理模型"
+    ],
+    "skillOverrides": {
+      "opencode-subagents": {
+        "displayName": "OpenCode 免费子代理集群",
+        "description": "轻量连接本地 OpenCode 免费子代理后端，动态调度现役免费模型并行处理聚焦任务（上限约 200K）"
+      }
+    },
+    "hostKind": "local",
+    "platforms": [
+      "macos",
+      "linux",
+      "windows"
+    ],
+    "mcpOverrides": {
+      "opencode-subagents": {
+        "displayName": "OpenCode 免费子代理集群",
+        "description": "轻量连接本地 OpenCode 免费子代理后端，动态调度现役免费模型并行处理聚焦任务（上限约 200K）"
+      }
+    }
+  },
+  "skills": "./skills/",
+  "mcpServers": {
+    "opencode-subagents": {
+      "command": "node",
+      "args": [
+        "./run-mcp.mjs"
+      ]
+    }
+  },
+  "commands": "./commands/",
+  "sessionStart": {
+    "skill": "opencode-subagents"
+  },
+  "systemPromptPath": "./system-prompt.md"
+}

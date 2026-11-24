@@ -1,0 +1,9 @@
+# Runtime files & local overrides
+config.json
+models-cache.json
+proxy.log
+proxy.pid
+.empty-ws/
+node_modules/
+.DS_Store
+Thumbs.db

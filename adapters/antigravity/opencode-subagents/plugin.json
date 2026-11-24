@@ -1,0 +1,12 @@
+{
+  "name": "opencode-subagents",
+  "displayName": "OpenCode 免费子代理集群",
+  "description": "轻量连接本机唯一的 OpenCode 免费子代理后端，自动同步在线免费模型并支持 /free-team 并行会诊（有效上下文约 200K）。",
+  "version": "1.1.0",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "/free-team 并行唤醒现役免费模型团队会诊当前方案",
+    "调用 OpenCode 免费子代理对当前聚焦代码做审查",
+    "列出当前所有可用的 OpenCode 免费子代理模型及状态"
+  ]
+}

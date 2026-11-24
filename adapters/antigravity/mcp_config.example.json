@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "opencode-subagents": {
+      "command": "node",
+      "args": [
+        "<OPENCODE_PROXY_DIR>/mcp-server.mjs"
+      ]
+    }
+  }
+}

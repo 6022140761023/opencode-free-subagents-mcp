@@ -1,0 +1,11 @@
+# Append to ~/.dsh/profiles/web-desktop/cordis.patch.yml
+- insert:
+    - id: mcp-opencode-subagents
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: opencode_subagents
+        transport: stdio
+        command: node
+        args:
+          - '<OPENCODE_PROXY_DIR>/mcp-server.mjs'
+        toolCallTimeoutMs: 300000

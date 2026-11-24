@@ -1,0 +1,7 @@
+# Add to ~/.codex/config.toml (or run: codex mcp add opencode_subagents -- node "<OPENCODE_PROXY_DIR>/mcp-server.mjs")
+[mcp_servers.opencode_subagents]
+command = "node"
+args = ["<OPENCODE_PROXY_DIR>/mcp-server.mjs"]
+enabled = true
+startup_timeout_sec = 15
+tool_timeout_sec = 300
